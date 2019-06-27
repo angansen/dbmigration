@@ -36,7 +36,7 @@ app.use('/migration', assetrouter);
 
 Dbconnect().then(res=>{
   console.log(res);
-  var server=app.listen(8084,()=>{
+  var server=app.listen(8085,()=>{
     console.log('got you')
     //console.log(getDb())
   })

@@ -45,7 +45,6 @@ static fetchMigrationData(req){
                 outFormat:oracledb.OBJECT
             })
             .then(response=>{
-                    file_source_db_version = response;
                     resolve(response);
                 })
                 .catch(err=>{
@@ -59,7 +58,6 @@ static fetchMigrationData(req){
                 outFormat:oracledb.OBJECT
             })
             .then(response=>{
-                    file_platform_family = response;
                     resolve(response)
                 })
                 .catch(err=>{
@@ -73,7 +71,6 @@ static fetchMigrationData(req){
                 outFormat:oracledb.OBJECT
             })
             .then(response=>{
-                    file_os_platform = response;
                     resolve(response)
                 })
                 .catch(err=>{
@@ -103,7 +100,6 @@ static fetchMigrationData(req){
                 outFormat:oracledb.OBJECT
             })
             .then(response=>{
-                    file_nls_cs_compatible = response;
                     resolve(response)
                 })
                 .catch(err=>{
@@ -119,7 +115,6 @@ static fetchMigrationData(req){
                 outFormat:oracledb.OBJECT
             })
             .then(response=>{
-                    file_db_size = response;
                     resolve(response)
                 })
                 .catch(err=>{
@@ -136,7 +131,6 @@ static fetchMigrationData(req){
                 outFormat:oracledb.OBJECT
             })
             .then(response=>{
-                    file_network_bandwidth = response;
                     resolve(response)
                 })
                 .catch(err=>{
@@ -153,7 +147,6 @@ static fetchMigrationData(req){
                 outFormat:oracledb.OBJECT
             })
             .then(response=>{
-                    file_target_db = response;
                     resolve(response)
                 })
                 .catch(err=>{
@@ -171,7 +164,6 @@ static fetchMigrationData(req){
                 outFormat:oracledb.OBJECT
             })
             .then(response=>{
-                    file_target_db_version = response;
                     resolve(response)
                 })
                 .catch(err=>{
@@ -189,7 +181,6 @@ static fetchMigrationData(req){
                 outFormat:oracledb.OBJECT
             })
             .then(response=>{
-                    file_permissible_dt = response;
                     resolve(response)
                 })
                 .catch(err=>{
@@ -208,7 +199,6 @@ static fetchMigrationData(req){
                 outFormat:oracledb.OBJECT
             })
             .then(response=>{
-                    file_migration_method = response;
                     resolve(response)
                 })
                 .catch(err=>{
