@@ -13,13 +13,13 @@ var SimpleOracleDB = require('simple-oracledb');
 const bodyParser=require('body-parser');
 SimpleOracleDB.extend(oracledb);
 
-var assetrouter = require('./routes/migrationRoute');
+var migrationrouter = require('./routes/migrationRoute');
 
 var app = express();
 
 // // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
-// app.set('view engine', 'jade');
+app.set('view engine', 'jade');
 app.use(bodyParser.json());
 app.use(cors());
 app.use(fileUpload());
@@ -28,20 +28,25 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static('public'));
-app.use('/migration', assetrouter);
+app.use('/migration', migrationrouter);
 
 // catch 404 and forward to error handler
 
 
 
-Dbconnect().then(res=>{
-  console.log(res);
-  var server=app.listen(8085,()=>{
-    console.log('got you')
+var server=app.listen(()=>{
+    console.log('got you');
     //console.log(getDb())
   })
-})
-.catch(err=>console.log(err))
+
+//Dbconnect().then(res=>{
+  //console.log(res);
+ // var server=app.listen(()=>{
+ //   console.log('got you')
+    //console.log(getDb())
+ // })
+//})
+//.catch(err=>console.log(err))
 
 
 module.exports=app;

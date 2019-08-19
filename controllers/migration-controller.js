@@ -16,11 +16,21 @@ exports.fetchMigrationData=(req,res)=>{
 
 exports.generateFile=(req,res)=>{
    
-    console.log(req.body);
+    console.log(req);
    
     Migration.writeIntoFile(req).then(result=>{
             res.json(result);
         })
+   
+}
+
+exports.clientFile=(req,res)=>{
+   
+    console.log('The request that we recieved ',req.files);
+   
+    Migration.uploadClientFileToPHP(req).then(result=>{
+        res.json(result);
+    });
    
 }
 
