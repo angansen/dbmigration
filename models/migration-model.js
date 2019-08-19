@@ -96,7 +96,6 @@ static fetchMigrationData(req){
                 outFormat:oracledb.OBJECT
             })
             .then(response=>{
-                    file_cdb = response;
                     resolve(response)
                 })
                 .catch(err=>{
